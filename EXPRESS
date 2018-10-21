@@ -1,0 +1,24 @@
+21:15 羅培瑋 index.ejs
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= id %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= id %> , <%= name %></h1>
+    <p>Welcome to Tamkumg</p>
+  </body>
+</html>
+21:15 羅培瑋 index.js
+
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    res.render('index', { id: '404081134', name: 'PeiWei' });
+});
+
+module.exports = router;
